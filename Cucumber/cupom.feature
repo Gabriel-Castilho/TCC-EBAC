@@ -21,3 +21,8 @@ Cenário: Cupom de valor porcentagem
 Quando eu cadastrar um cupom
 E selecionar o tipo de desconto por porcentagem no valor de 50%
 Então o desconto aplicado no carrinho será de 50%
+
+Cenário: Campos obrigatório
+Quando cadastrar um cupom
+E enviar a requisição
+Então os campos de code, amount, discount_type e description devem ser obrigatórios
