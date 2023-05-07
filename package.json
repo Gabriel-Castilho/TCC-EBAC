@@ -4,7 +4,8 @@
   "description": "Trabalho de conclusão do curso Teste de Software da EBAC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "npx cypress run"
   },
   "author": "",
   "license": "ISC",
