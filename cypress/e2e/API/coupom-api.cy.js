@@ -4,6 +4,7 @@
 describe ('Teste da API de cupom',()=>{
 
     let basicAuth ='Basic YWRtaW5fZWJhYzpAYWRtaW4hJmJAYyEyMDIy'
+    let nameFixed = Math.floor(Math.random()*1000)
   /*  it('Deve validar o contrato de cupoms',()=>{
         cy.request('/rest-api/docs/#/coupons/').then(response=>{
             return coupom.validateAsync(response.body)
@@ -36,7 +37,7 @@ describe ('Teste da API de cupom',()=>{
     })
 
     it('Deve cadastrar um cupom com nome fixo com sucesso',()=>{
-        cy.insertCoupon(basicAuth,"Cupom20121","20","percent","Cupom20")
+        cy.insertCoupon(basicAuth,`${nameFixed}`,"20","percent","Cupom20")
         .then(response=>{
             expect(response.status).to.equal(201)
         })
@@ -46,10 +47,21 @@ describe ('Teste da API de cupom',()=>{
         let discount = ["fixed_product","percent","fixed_cart"]
         let discountSort = Math.floor(Math.random() * (3-0)+0)
         let quantityDiscount = Math.floor(Math.random()* 100)
-        cy.insertCoupon(basicAuth,"cupom20121",`${quantityDiscount}`,`${discount[discountSort]}`,`Desconto de ${quantityDiscount} ${discount[discountSort]}`)
+        cy.insertCoupon(basicAuth,`${nameFixed}`,`${quantityDiscount}`,`${discount[discountSort]}`,`Desconto de ${quantityDiscount} ${discount[discountSort]}`)
         .then(response=>{
             expect(response.status).to.equal(400)
             expect(response.body.message).to.equal("O código de cupom já existe")
+        })
+    })
+
+    it('Deve mostrar erro ao cadastrar sem autenticação',()=>{
+        let discount = ["fixed_product","percent","fixed_cart"]
+        let discountSort = Math.floor(Math.random() * (3-0)+0)
+        let quantityDiscount = Math.floor(Math.random()* 100)
+        cy.insertCoupon("cupom20121",`${quantityDiscount}`,`${discount[discountSort]}`,`Desconto de ${quantityDiscount} ${discount[discountSort]}`)
+        .then(response=>{
+            expect(response.status).to.equal(401)
+            expect(response.body.message).to.equal("Desculpe, você não possui permissão para criar recursos.")
         })
     })
 })
