@@ -17,6 +17,18 @@ Trabalho para exercitar todo o conceito aprendiddo no curso, como por exemplo:
 * Testes de performance
 * SQL e NOSQL básico
 
+E software/frameworks aprendidos
+
+* Cypress
+* Apache Jmeter
+* Postman
+* MongoDB
+* SQL
+* Docker
+* Appium
+* Jenkins
+* Cucumber / Gherkin
+
 O arquivo com todo exercício pode ser visualizado no arquivo .doc na raiz dessa workspace.
 
 E logo abaixo algumas evidências dos testes automatizados:
