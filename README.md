@@ -14,3 +14,6 @@ Automação de API utilizando cypress, as validações foram feitas para:
 
 https://user-images.githubusercontent.com/57070964/236691023-6cb63b8d-cfab-45ec-b4fa-27e9aafd503b.mp4
 
+Criado um job pipeline no Jenkins para executar os testes automatizados 
+
+![image](https://user-images.githubusercontent.com/57070964/236693928-d77b4059-faa5-4bb5-acbd-d49640ec789b.png)
