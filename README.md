@@ -2,7 +2,7 @@
 
 Projeto de conclusão de curso de Teste de Software da EBAC https://ebaconline.com.br/qualidade-de-software.
 
-Trabalho para exercitar todo o conceito aprendiddo no curso, como por exemplo:
+Trabalho para exercitar todo o conceito aprendido no curso, como por exemplo:
 
 * Critérios de aceitação e Histórias do usuário
 * Fundamentos de testes
